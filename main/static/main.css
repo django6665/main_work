@@ -1,0 +1,167 @@
+/*It is main.css*/
+@font-face {
+    font-family: Huntsman;
+    src: url("http://django6665.pythonanywhere.com/static/The Huntsman.otf");
+   }
+/**{*/
+/*    margin:0px;*/
+/*    padding:0px;*/
+/*}*/
+body{
+    background-image:url("./img/290067.jpg.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+    /*background-position:70% 80%;*/*/
+}
+/*.page{*/
+/*    background-image:url("./img/290067.jpg.jpg");*/
+/*    background-size:cover;*/
+/*    background-repeat:no-repeat;*/
+/*    background-position:70% 80%;*/
+/*    position: relative;*/
+/*    width:100%;*/
+/*    height:100vh;*/
+/*    margin:0px;*/
+/*    background-color:green;*/
+/*}*/
+.page{
+    background-image:url("./img/Music&Atmosphere-Sunn-O)))-bassAliens-585423.jpeg.jpg");
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:50% 50%;
+    width:100%;
+    background-color:green;
+}
+h2{
+    font-family: Huntsman;
+    text-align:center;
+    color:rgba(238, 130, 238,1);
+}
+span.linear{
+    margin:10px 0px;
+    display:block;
+    width:100%;
+    min-width:200px;
+    height:5px;
+    min-height:20px;
+    background-image:linear-gradient(86deg, rgba(197,255,8,1) 0%, rgba(240,7,232,1) 100%);
+}
+label{
+    color:rgb(210, 105, 30);
+}
+input[type="checkbox"]{
+    display:none;
+}
+input[type="checkbox"][id='all_del_input']:checked ~ div.div_left{
+    background-color:rgb(0, 0, 0);
+    color:rgb(128, 0, 0);
+}
+input[type="checkbox"][id='all_del_input']:checked ~ div.div_left > label{
+    color:red;
+}
+input[type="checkbox"][id='all_del_input']{
+    display:inline-block;
+}
+input[type="checkbox"]:checked + label{
+    background-color:rgb(255, 0, 255);
+    color:rgb(25, 25, 112);
+}
+.delete_css{
+    max-width:600px;
+    box-shadow:0px 0px 10px 2px #44ff3b inset;
+}
+.delete_css > label.label_one{
+    display:inline-block;
+    width:100%;
+}
+.after_border_span{
+    display:block;
+    border-bottom:1px #44ff3b solid;
+    width:100%;
+    height:0px;
+    content:"1";
+}
+input[name="go"]{
+    background-color:red;
+    color:pink;
+    width:50px;
+    height:50px;
+    border-radius:50%;
+}
+input[name="submit_del"]{
+ border-radius:20% 40% 10%;
+ font-family:Huntsman;
+ color:white;
+ background: #5d00b3;
+ border-color:rgb(230, 230, 250);
+}
+input[name="submit_del"]:hover{
+ transform:translateX(40px) scale(1.8);
+}
+
+input[name="go"]:hover{
+    transform:translateX(40px) scale(3);
+}
+input[name="go"]:hover + input{
+ transform:translateX(40px) scale(1.8);
+}
+input[type="file"]{
+ border:2px solid rgb(255, 69, 0);
+ padding:10px;
+ color:rgb(139, 0, 0);
+}
+@keyframes run_forrest {
+  /*0%{transform:scale(1) rotate(0deg) translateX(0px);}*/
+  /*50%{transform: scale(4) rotate(180deg) translateX(30px);}*/
+  /*100%{transform:scale(1) rotate(360deg) translateX(0px);}*/
+  0%{transform:scale(1) rotate(0deg) translateX(0px);}
+  50%{transform: scale(4) rotate(180deg) translateX(30px);}
+  100%{transform:scale(1) rotate(360deg) translateX(0px);}
+}
+input[name="submit_file"]{
+    border-radius:15px 50px;
+    background-image:url("./img/agt_login.png");
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-position:50% 50%;
+    font-size:0px;
+    width:20px;
+    height:20px;
+    transform-origin: center center;
+    animation-name:run_forrest ;
+    animation-duration:8s;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+}
+input[name="submit_file"]:hover{
+    animation-play-state:paused;
+    transform:scale(3)
+}
+input[name="week"]{
+    margin-left:40px;
+    width:25px;
+    background-color:rgb(0, 255, 127);
+    border:none;
+    font-size:20px;
+    color:rgb(255, 0, 255);
+}
+input[name="week"]:hover,
+input[name="week"]:focus{
+    width:40px;
+    height:40px;
+    font-size:25px;
+    transform:scale(2);
+
+}
+::-webkit-textfield-decoration-container {}
+::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+.status{
+ text-align:center;
+ background-color:red;
+}
+}

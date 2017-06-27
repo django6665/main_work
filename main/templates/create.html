@@ -1,0 +1,23 @@
+<h1>create</h1>
+<p>download</p>
+<form enctype="multipart/form-data" method="POST">
+    {% csrf_token %}
+    <input name="q">
+    <input type="file" name="w" multiple>
+    <input type='submit' value="let's go">
+</form>
+<hr>
+{{file}}
+<hr>
+{% for i in model%}
+<p style="border-top:2px solid red;">{{i.xlsx}}<br>{{i.id}}<br>{{i.now}}<br>{{i.xlsx.url }}<br>{{i.xlsx.path }}<br><a href="{{i.xlsx.url }}">{{i.xlsx}}</a></p>
+{% endfor%}
+<hr>
+<hr>
+{{model_eighth}}<br>
+{{model_eighth.xlsx}}<br>
+{{model_eighth.xlsx.url}}<br>
+{{model_eighth.now}}<br>
+{{model_eighth.xlsx.path}}<br>
+<img src="{{model_eighth.xlsx.url}}" style="height:100px;width:100px;"><br>
+<!--<img src="https://www.pythonanywhere.com/user/django6665/files/home/django6665/main/media/06/22/6379130.jpeg">-->

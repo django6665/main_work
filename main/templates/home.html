@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="/static/main.css">
+</head>
+<body>
+<div class="page">
+<h2>Hi it is home.html</h2>
+<form enctype="multipart/form-data" method="POST">
+    {% csrf_token %}
+    <!--<input name="q">--><!--Why i do it? I`m don`t remember-->
+    <input type="file" name="w" multiple>
+    <input type='submit' value="let's go" name="submit_file">
+</form>
+<span class="linear"></span>
+{% if file_save %}
+    Загружено: {{file_save}}
+{% else %}
+{% endif %}
+<span class="linear"></span>
+
+
+<form method="post">
+{% csrf_token %}
+<div class="delete_css">
+    <label for="all_del_input">Удалить все</label>
+    <input type="checkbox" name="delete_all" value="all" id="all_del_input">
+    <span class="after_border_span"></span>
+
+
+    {% for file in storage_zip_list%}
+        <div class="div_left" style="float:left;">
+            <input type="checkbox" value='{{file.1}}' id="table_del_{{file.1}}" name="delete">
+            <label for='table_del_{{file.1}}' class="label_one">{{file.0}}</label>
+        </div>
+        <a href="/media/storage/{{file.0}}"><div style="width:10px;height:10px;background-color:red;float:right;display:inline-block"></div></a>
+        <br>
+    {%endfor%}
+    <input type="submit" value="Удалить выбранные?" name="submit_del">
+    </div>
+    </form>
+
+<span class="linear"></span>
+<form method="post">
+    {% csrf_token %}
+    <input name="go" type="submit" value="start">
+    <input name="week"  type="number"  value="23">
+</form>
+<p class="status">{{status_file}}</p>
+
+
+
+
+
+</div><!-- end page-->
+</body>
+</html>
